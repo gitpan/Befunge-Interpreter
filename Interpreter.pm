@@ -6,7 +6,7 @@ package Befunge::Interpreter;
 # This is the program counter initialization to +1, 0;
 
 
-$VERSION = "0.01a";
+$VERSION = "0.01b";
 
 sub new
 {
@@ -24,18 +24,11 @@ $pc{'y'} = 0;
 # stack too
 @stack = 0;
 
-$MAX_TORUS_X = 80;
-$MAX_TORUS_Y = 25;
+$MAX_TORUS_X = 79;
+$MAX_TORUS_Y = 24;
 
 # position
 $tx, $ty = 0;
-
-sub new
-{
-    my $self = {};
-    bless $self;
-    return $self;
-}
 
 sub spush {
     my @ARGZ = shift @_;
@@ -141,7 +134,7 @@ sub stack_gre {
 }
 
 sub pc_rand {
-    $randnum = int(rand(3));
+    $randnum = int(rand(4));
   SWITCH2: {
       ($randnum == 0) && do { $pc{'x'} = 1; $pc{'y'} = 0; };
       ($randnum == 1) && do { $pc{'x'} = -1; $pc{'y'} = 0; };
@@ -215,7 +208,7 @@ sub siopy {
     
 
 sub string_mode {
-    $lookloc = "fart";
+    $lookloc = "fnerk!";
     # Here's where we found the first quote
     my @argz = @_;
     $curlocx = $argz[0];
@@ -368,8 +361,8 @@ Befunge::Interpreter - Perl extension for interpreting befunge.
 
 =head1 DESCRIPTION
 
-	Befunge::Interpreter is a fully Befunge-93 compliant Befunge interpreter
-	written in Perl.
+	Befunge::Interpreter is a fully Befunge-93 compliant 
+        Befunge interpreter written in Perl.
 
 	The usage is easy.
 
