@@ -6,7 +6,7 @@ package Befunge::Interpreter;
 # This is the program counter initialization to +1, 0;
 
 
-$VERSION = "0.01b";
+$VERSION = "0.01c";
 
 sub new
 {
@@ -355,8 +355,8 @@ Befunge::Interpreter - Perl extension for interpreting befunge.
 
 
 =head1 SYNOPSIS
-	
-	use Befunge::Interpreter;
+
+        use Befunge::Interpreter;
 
 
 =head1 DESCRIPTION
