@@ -6,7 +6,7 @@ package Befunge::Interpreter;
 # This is the program counter initialization to +1, 0;
 
 
-$VERSION = "0.01";
+$VERSION = "0.01a";
 
 sub new
 {
@@ -57,7 +57,7 @@ sub spop {
 sub get_befunge {
     my $self = shift;
     my $FILENAME = shift;
-    print "got $FILENAME\n";
+    #print "got $FILENAME\n";
     open (BFPROG, $FILENAME) or die "program $FILENAME not found!";
     my $counter = 0;
     my $x, $y = 0;
@@ -363,7 +363,7 @@ Befunge::Interpreter - Perl extension for interpreting befunge.
 
 =head1 SYNOPSIS
 	
-	use Befunge::Interpreter
+	use Befunge::Interpreter;
 
 
 =head1 DESCRIPTION
